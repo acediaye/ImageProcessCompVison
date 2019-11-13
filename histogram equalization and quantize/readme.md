@@ -5,7 +5,7 @@ myhisteq function takes in a binary image and displys a equalized and normalized
 myquantize function takes in a binary image and uses less graylevels to display image.
 
 ## Images
-![alt text](orginalflower.jpg)
+![alt text](originalflower.jpg)
 ![alt text](normalizedhistogram.jpg)
 ![alt text](cumulativedistributionfunction.jpg)
 ![alt text](equalizednormalizedhistogram.jpg)
