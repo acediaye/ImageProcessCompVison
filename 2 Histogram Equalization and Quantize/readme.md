@@ -1,4 +1,4 @@
-# Histogram, Histogram Equalization, Quantization
+# Histogram, Histogram Equalization, and Quantization
 
 myhist function takes in a binary image and displays a normalized histogram.\
 myhisteq function takes in a binary image and displays an equalized and normalized histogram.\
