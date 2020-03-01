@@ -1,10 +1,10 @@
 # Line, Circle, and Corner Detection
 Hough transform is a feature extraction to find instances of objects within a certain class of shapes by a voting procedure.
 This voting procedure is carried out in a parameter space for example:\
-Lines equation is y=mx+b where m is the slope and b is the y intercept\\
+Lines equation is y=mx+b where m is the slope and b is the y intercept\
 For each possibilities of x,y you get a corresponding a,b parameter pair.
 However, m,b cannot handle vertical lines with m = infinite; so we use polar coordinates with theta and rho, where theta = angle from x axis and rho = perpendicular distance from origin to line.\
-Circle equation is (x-a)^2 + (y-b)^2 = r^2 where a,b is circle's origin and r is radius.\\
+Circle equation is (x-a)^2 + (y-b)^2 = r^2 where a,b is circle's origin and r is radius.\
 We use the parametric form of x = a + r*cos(theta) and y = b + r*sin(theta)
 After the voting procedure, the parameters with the high vote is the correct parameter.
 Using the original parameters, we can draw the lines/circles back out onto the images.
