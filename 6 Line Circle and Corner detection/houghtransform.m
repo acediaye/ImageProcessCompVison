@@ -11,8 +11,9 @@ for i=1:150%origin top left
 end
 figure(1)
 imshow(myimage)
+title('original image')
 %origin at top left, rho perpendicular distnace to line from origin
-rho=75;
+rho=75;%manual check line
 theta=90;
 x0=1;
 xend=150;
@@ -45,6 +46,7 @@ figure(2)
 imshow(imadjust(rescale(accumulator)),[],'XData',thetas,'YData',rhos,'InitialMagnification','fit')
 xlabel('\theta (degrees)')
 ylabel('\rho')
+title('accumulator')
 axis on
 axis normal
 colormap(gray)
@@ -60,7 +62,7 @@ for y=1:height
         if accumulator(y,x)>threshold
             rho=rhos(y);%take out rho
             theta=thetas(x);%take out theta
-            sprintf("theta %d, rho %d",theta,rho);
+            sprintf("theta %d, rho %d",theta,rho);%display theta, rho from accumulator>threshold
             count=count+1;
             x0=1;%x start
             xend=size(myimage,2);%x end
@@ -81,17 +83,21 @@ for y=1:height
             else %theta!=0 %for non vertical line
                 for idx=x0:xend%for each x
                     idy=round((rho-idx*cosd(theta))/sind(theta));%calc corresponding y value
-                    houghimage(idy,idx)=255;%set pixel white
+                    if idy>=1 && idy<=size(myimage,1)%check within height bounds
+                        houghimage(idy,idx)=255;%set pixel white
+                    end
                 end
             end
             %}
         end
     end
 end
-count
+count%display count accumulator>threshold
 imshow(houghimage)
+title('hough image')
 
 %{
+%from matlab
 [H,theta,rho]=hough(myimage);
 figure(4)
 imshow(imadjust(rescale(H)),[],...
