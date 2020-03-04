@@ -55,7 +55,7 @@ Simple demo of how descriptor transform works.\
 Using the equations: \
 delta theta = thetaT - thetaQ where T is template and Q is query\
 |xT| = | cos(Dtheta) -sin(Dtheta)| * |xQ| + |delta x| \
-|yT|   |+sin(Dtheta)  cos(Dtheta)|   |yQ|   |delta y| \
+|yT| = |+sin(Dtheta)  cos(Dtheta)| * |yQ| + |delta y| \
 Finds closest delta x,y,theta that will match the query image/data to the template image/data.\
 
 ## Images
