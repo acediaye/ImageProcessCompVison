@@ -59,7 +59,7 @@ delta theta = thetaT - thetaQ, where T is template and Q is query \
 Finds closest delta x, y, theta that will match the query image/data to the template image/data.  
 Original image diagonal line at 45 degrees \
 Transformed image translated [300; 0] and rotated 90 degrees \
-Untransformed image translated [0;-300] and rotated -90 degrees \
+Untransformed image translated [0; 300] and rotated -90 degrees \
 Data matching with all 5 points matching
 
 ## Images
