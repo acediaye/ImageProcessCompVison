@@ -51,7 +51,7 @@ Same principle, the parameter space is a,b for 2D or a,b,r for 3D where a,b is t
 ![alt text](circlehough.jpg)
 
 ## Hough Transform Descriptor
-Simple demo of how descriptor transform works. \ 
+Simple demo of how descriptor transform works.   
 Using the equations: \
 delta theta = thetaT - thetaQ, where T is template and Q is query \
 |xT| = | cos(Dtheta) -sin(Dtheta)| * |xQ| + |delta x| \
